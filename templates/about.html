@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	About Me
+{% endblock title %}
+
+{% block body %}
+	
+    <div class="p-3 mb-5 bg-danger text-white text-center display-2">ABOUT ME</div>
+
+    <div class="container">
+    	<div class="row">
+    		<p class="lead">A foodie, pianist, guitarist and an ardent chess lover. Pursuing a CS degree and interested in Machine Learning and AI! Would love to pursue research!</p>
+    	</div>
+	</div>
+
+    <div class="container lead mb-5">
+    	<div class="row">
+    		<div class="col">
+    			Experience
+    		</div>
+    		<div class="col">
+				Project Intern at ITC Infotech
+			</div>
+			<div class="col">
+				Worked on "Detail Extraction From Govt. IDs using Deep Learning" &"Detail Extraction from Airway Bills using Image Processing."
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				See My Complete Profile
+			</div>
+			<div class="col">
+				<a href="https://www.linkedin.com/in/sibasishtripathyy/">LinkedIn Profile</a>
+			</div>
+			<div class="col"></div>
+
+		</div>
+	</div>
+
+	<div class="text-center pt-5">
+		<a href="{% url 'home' %}" class="btn btn-outline-danger btn-lg" role="button">GO BACK TO HOME PAGE</a>
+    </div>
+{% endblock body %}
