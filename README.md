@@ -21,6 +21,20 @@ Then install all the requirements using:
 pip install -r requirements.txt
 ```
 
+
+Now the SECRET KEY portion isn't available. You can go to this [Stack Overflow](https://stackoverflow.com/questions/4664724/distributing-django-projects-with-unique-secret-keys/16630719#16630719) page to generate a random SECRET KEY.
+After doing that, go to the settings.py file in the "DjangoProject1" directory. There you have to insert the newly generated random SECRET KEY by replacing one line of code in this portion of the settings file like this:
+
+```
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
+# Update secret key
+# Insert your newly generated SECRET KEY here by replacing os.environ line with the key.
+SECRET_KEY = "...insert your generated key here...keep the key inside quotes"
+```
+
 Apply all the migrations:
 
 ```
